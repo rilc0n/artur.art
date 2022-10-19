@@ -25,9 +25,9 @@
 						<li>ss
 							<a href="{{ site.url | prepend: site.baseurl }}">
 								<div class="img-wrapper">
-									<img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.title }}" />
+									<img src="{{ site.logo | prepend: site.baseurl }}" alt="{{ site.project.title }}" />
 								</div>
-								<h3>{{ item.project.title }}</h3>
+								<h3>{{ site.project.title }}</h3>
 							</a>
 						</li>
 					{% endfor %}
