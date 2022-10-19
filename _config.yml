@@ -18,4 +18,4 @@ sass:
   style: compressed
 
 paginate: 5
-paginate_path: "/pineapple/page:num/"
+paginate_path: "/page:num/"
