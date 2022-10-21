@@ -1,0 +1,71 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-md-8">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="post-header">
+        <p class="post-meta">
+          {% if page.author %} • 22
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person"
+            ><span itemprop="name">{{ page.author }}</span></span
+          >{% endif %}
+        </p>
+      </header>
+      <div class="post-content" itemprop="articleBody">{% include picture-post.html %}{{ content }}</div>
+      <h4 class="post-title" itemprop="name headline">
+        {{ page.title }}
+      </h4>
+    </article>
+
+
+
+    <div class="row">
+
+      <!-- PREV -->
+      <div class="col-5 col-sm-4 col-lg-3 text-center">
+        {% if page.next.url %}
+        <div class="page-link">
+          <a href="{{page.next.url}}" tabindex="-1">
+            <picture>
+                <source type="image/webp" srcset="/images/posts/{{ page.next.slug }}/imagexsm.webp" >
+                <source type="image/jpeg" srcset="/images/posts/{{ page.next.slug }}/imagexsm.jpg" >
+                <img src="/images/posts/{{ page.next.slug }}/imagexsm.jpg" alt="{{page.next.title}}" />
+            </picture>
+          </a>
+          <a href="{{page.next.url}}" tabindex="-1">&laquo; Previous</a>
+        </div>
+        {% endif %}
+      </div>
+      <div class="col-1 col-sm-2 col-lg-3"></div>
+
+      <!-- NEXT -->
+      <div class="col-1 col-sm-2 col-lg-3"></div>
+      <div class="col-5 col-sm-4 col-lg-3 text-center">
+        {% if page.previous.url %}
+        <div class="page-link">
+          <a href="{{page.previous.url}}" tabindex="-1">
+            <picture>
+                <source type="image/webp" srcset="/images/posts/{{ page.previous.slug }}/imagexsm.webp" >
+                <source type="image/jpeg" srcset="/images/posts/{{ page.previous.slug }}/imagexsm.jpg" >
+                <img src="/images/posts/{{ page.previous.slug }}/imagexsm.jpg" alt="{{page.previous.title}}" />
+            </picture>
+          </a>
+          <a href="{{page.previous.url}}" tabindex="-1">Next &raquo;</a>
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+
+
+    <div class="comments">
+      {% if site.disqus-shortname %} {% include disqus.html %} {% endif %}
+    </div>
+  </div>
+
+  {% include sidebar.html %}
+</div>
+
+{% include fb-script.html %}

@@ -1,0 +1,88 @@
+.card {
+  margin-bottom: 2em;
+  border: none;
+  box-shadow: none;
+  background-color: #f9f9f9;
+  }
+
+.card-body {
+  padding: 1.25rem 0.1rem 1.25rem 0.1rem;
+  }
+
+.panel-title {
+  font-size: 1.1em;
+  }
+
+.card .image img {
+  height: unset;
+  }
+
+.logo {
+  height: 27px;
+  }
+
+.navbar {
+  padding: 0rem 0.1rem;
+  }
+
+a {
+  color: unset;
+  }
+
+a:hover {
+  color: unset;
+  text-decoration: none;
+  }
+
+.post-title {
+  text-decoration: none;
+  line-height: 1.5;
+  }
+
+.overflow-hidden {
+  overflow: unset !important;
+  }
+
+.rounded {
+  border-radius: unset !important;
+  }
+
+.greetings {
+  font-weight: 700;
+  font-size: 4.5rem;
+  }
+
+.profilbild {
+  margin: 0 auto;
+  display: block;
+  border-radius: 50%;
+  width:90px;
+  }
+
+.page-link {
+  color: unset;
+  }
+
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: #0C0C0D;
+  border-color: #0C0C0D;
+  }
+
+.page-link:hover {
+  color: unset;
+  }
+
+.recent {
+  padding: unset;
+  border: none;
+  }
+
+.comments {
+  padding-top: 3rem;
+  }
+
+body {
+  background-color: #f9f9f9;
+  }

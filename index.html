@@ -1,42 +1,87 @@
 ---
+layout: default
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>{{ site.author }} / {{ site.tagline }}</title>
-	<meta name="author" content="{{ site.author }}">
-	<meta name="description" content="{{ site.description }}">
-	<meta name="keywords" content="{{ site.keywords }}">
-	{% include head.html %}
-</head>
-<body>
-	{% include header.html %}
-	<main class="content">
-		<section class="intro">
-			<div class="container">
-				<h2>About me.</h2>
-				<p>{{ site.description }}</p>
-			</div>
-		</section>
-		<section class="projects">
-			<div class="container">
-				<ul class="projects-list">
-					{% for post in paginator.posts %}
-						<li>ssss4
-							<a href="{{ site.url | prepend: site.baseurl }}">
-								<div class="img-wrapper">
-									<img src="{{ post.logo | prepend: site.baseurl }}" alt="{{ site.project.title }}" />
-								</div>
-								<h3>{{ post.title }}</h3>
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-			</div>
-		</section>
-	</main>
-	{% include footer.html %}
-	<script src="{{ "/assets/scripts/vendor/scrollreveal.min.js" | prepend: site.baseurl }}"></script>
-	<script src="{{ "/assets/scripts/home.js" | prepend: site.baseurl }}"></script>
-</body>
-</html>
+<div class="home py-4 py-md-5">
+
+
+  {% if paginator.page == 1 %}
+  <div class="row">
+    <div class="col-12">
+      <div class="card"><h1 class="greetings">Hi, I'm Artur. 👋</h1></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <article class="post">I'm a <b>Thumbnail Designer</b>. To get your YouTube videos clicked, you need amazing and eyecatching thumbnails.
+        <br>I will create such a thumbnail that is guaranteed to <b>boost your YouTube views</b> 🚀.
+        <br><br>
+        👉 If you're interested, just check out my <b>latest work.</b>
+        </article>
+      </div>
+    </div>
+    {% endif %}
+
+  <div class="row">
+    {% for post in paginator.posts %}
+      <div class="col-12 col-md-6 col-lg-4">
+       <a href="{{ post.url | prepend: site.baseurl }}" class="index-anchor">
+        <div class="card rounded overflow-hidden">
+          <div class="image">
+            {% include picture-th.html %}
+            <div class="card-body">
+              <h2 class="panel-title">{{ post.title | truncate: 125 }}</h2>
+            </div>
+          </div>
+        </div>
+      </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-4 text-center">
+        {% if paginator.total_pages > 1 %}
+        <ul class="pagination">
+          {% if paginator.previous_page %}
+            <li class="page-item">
+              <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Previous</a>
+            </li>
+          {% else %}
+            <li class="page-item disabled">
+              <span class="page-link">Previous</span>
+            </li>
+          {% endif %}
+
+          {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+              <li class="page-item active">
+                <span class="page-link">{{ page }}</span>
+              </li>
+            {% elsif page == 1 %}
+              <li class="page-item">
+                <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+              </li>
+            {% else %}
+              <li class="page-item">
+                <a class="page-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+            {% endif %}
+          {% endfor %}
+
+          {% if paginator.next_page %}
+            <li class="page-item">
+              <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+            </li>
+          {% else %}
+            <li class="page-item disabled">
+              <span class="page-link">Next</span>
+            </li>
+          {% endif %}
+          </ul>
+        {% endif %}
+    </div>
+  </div>
+
+</div>
