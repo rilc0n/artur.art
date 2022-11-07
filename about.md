@@ -1,7 +1,7 @@
 ---
+title: "Hi, I'm Artur \U0001F44B"
+permalink: "/about/"
 layout: page
-title: Hi, I'm Artur 👋
-permalink: /about/
 ---
 
 <div class="row">
