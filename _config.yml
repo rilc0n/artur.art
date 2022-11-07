@@ -91,10 +91,6 @@ disqus-shortname: artur-7
 facebook: 
 quora: 
 twitter: 
-fb-like-box: false
-fb-app-id: 549480635219583
-fb-page-url: https://www.facebook.com/webjeda/
-fb-page-title: webjeda
 sass:
   style: compressed
 plugins:
