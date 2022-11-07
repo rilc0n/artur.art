@@ -1,7 +1,7 @@
 ---
+title: "Thank You \U0001F4E8"
+permalink: "/contact-thx/"
 layout: page
-title: Thank You 📨
-permalink: /contact-thx/
 ---
 
 Your message has been sent.
