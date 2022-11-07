@@ -1,0 +1,39 @@
+---
+title: artur
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+email: arturweiss@ya.ru
+description: 'Eye-Catching Thumbnail Designer.
+
+'
+url: https://artur.ga
+default-image: webjeda-logo-big.jpg
+built-by: artur
+copyright:
+  name: artur
+  year: '2022'
+  link: http://artur.ga
+permalink: "/:title/"
+paginate: 6
+paginate_path: "/page:num/"
+analytics: 
+disqus: true
+disqus-shortname: artur-7
+facebook: 
+quora: 
+twitter: 
+fb-like-box: false
+fb-app-id: 549480635219583
+fb-page-url: https://www.facebook.com/webjeda/
+fb-page-title: webjeda
+sass:
+  style: compressed
+plugins:
+- jekyll-paginate
+- jekyll-seo-tag
