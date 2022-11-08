@@ -38,8 +38,7 @@
             <li>
               <p>
                 <a href="{{ post.url  | relative_url }}">{% include picture-th.html %}</a>
-                <a href="{{ post.url  | relative_url }}">
-                {{ post.title }}</a><small>{{ commonTags }}</small>
+
               </p>
             </li>
             {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
