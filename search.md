@@ -1,7 +1,6 @@
 ---
+permalink: "/search/"
 layout: page
-title:
-permalink: /search/
 ---
 
 <!-- Html Elements for Search -->
