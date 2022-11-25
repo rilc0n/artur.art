@@ -38,10 +38,11 @@ disqus: yes
 disqus-shortname: artur-7
 
 #social
-facebook:
+facebook: designerartur
 quora:
-twitter: design_artur
-email: arturweiss@ya.ru
+twitter: halloartur
+email: arturweiss@duck.com
+instagram: halloartur
 
 #facebook like box
 #fb-like-box: no

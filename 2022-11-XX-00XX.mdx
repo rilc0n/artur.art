@@ -1,10 +1,3 @@
 ---
 ---
-
----
-layout: post
-title: xxx
-tags:
-{% for tag in site.tags %}{% capture tag_name %}{{ tag | first }}{% endcapture %}- {{ tag_name | join: ',' }}
-{% endfor %}
----
+  {% for tag in site.tags %}{% capture tag_name %}{{ tag | first }}{% endcapture %} {{ tag_name | join: ',' }}{% endfor %}
