@@ -27,7 +27,7 @@ copyright:
 
 # Build settings
 permalink: /:title/
-paginate: 9
+paginate: 60
 paginate_path: /page:num/
 
 # Tracker
@@ -58,3 +58,4 @@ sass:
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-loading-lazy
